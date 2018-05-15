@@ -17,11 +17,11 @@ var pkg = require('../package.json');
 
 program
   .version(pkg.version)
-  .option('-f --force', 'Forcely install SB')
+  .option('-f --force', 'Forcibly install SB')
   .option('-Y --use-yarn', 'Use yarn to install deps')
   .parse(process.argv);
 
-var welcomeMessage = 'sb-cli - the esyest way to add a SB to your project';
+var welcomeMessage = 'sb-cli - the easiest way to add a SB to your project';
 logger.log(chalk.inverse('\n ' + welcomeMessage + ' \n'));
 
 var useYarn = Boolean(program.useYarn) || /\.yarn-cache/.test(__dirname);
